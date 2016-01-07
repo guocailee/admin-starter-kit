@@ -11,5 +11,10 @@
     "url": "git@192.168.0.177:gagelee.li/angular-starter-kit.git"
   },
   "author": "guocailee",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "webpack": "^1.12.10",
+    "webpack-dev-server": "^1.14.0"
+  }
 }
