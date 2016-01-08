@@ -1,7 +1,7 @@
 var autoprefixer = require('autoprefixer');
 
 module.exports = {
-    entry: './app/script/app.jsx',
+    entry: './app/script/app.js',
     output: {
         // Absolute output directory
         path: __dirname + '/build',
@@ -32,6 +32,9 @@ module.exports = {
             query: {
                 presets: ['es2015']
             }
+        }, {
+            test: /\.html$/,
+            loader: 'raw'
         }]
     },
     postcss: function() {
@@ -48,5 +51,6 @@ module.exports = {
                 'bb >= 10'
             ]
         )];
-    }
+    },
+    devtool: 'source-map'
 }
