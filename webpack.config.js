@@ -1,14 +1,14 @@
-var autoprefixer = require('autoprefixer');
-
-module.exports = {
+var path = require("path");
+var webpack = require("webpack");
+module.export = {
     entry: './app/script/app.js',
     output: {
         // Absolute output directory
-        path: __dirname + '/build',
+        path: path.join(__dirname, "build"),
 
         // Output path from the view of the page
         // Uses webpack-dev-server in development
-        publicPath: 'http://localhost:8080/',
+        publicPath: "build/",
 
         // Filename for entry points
         // Only adds hash in build mode
@@ -26,7 +26,7 @@ module.exports = {
             test: /\.scss$/,
             loader: "style-loader!css-loader!postcss-loader!sass-loader"
         }, {
-            test: /\.jsx?$/,
+            test: /\.js$/,
             exclude: /(node_modules|bower_components)/,
             loader: 'babel-loader',
             query: {
@@ -53,4 +53,4 @@ module.exports = {
         )];
     },
     devtool: 'source-map'
-}
+};
