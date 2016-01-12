@@ -1,10 +1,10 @@
-var path = require("path");
 var webpack = require("webpack");
-module.export = {
+var autoprefixer = require('autoprefixer');
+module.exports = {
     entry: './app/script/app.js',
     output: {
         // Absolute output directory
-        path: path.join(__dirname, "build"),
+        path: "build",
 
         // Output path from the view of the page
         // Uses webpack-dev-server in development
@@ -12,11 +12,11 @@ module.export = {
 
         // Filename for entry points
         // Only adds hash in build mode
-        filename: '[name].bundle.js',
+        filename: '[name].bundle.[hash].js',
 
         // Filename for non-entry points
         // Only adds hash in build mode
-        chunkFilename: '[name].bundle.js'
+        chunkFilename: '[name].bundle.[hash].js'
     },
     module: {
         loaders: [{

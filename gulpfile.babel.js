@@ -9,8 +9,7 @@ import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
-
-let webpackConfig = Object.create(packConfig);
+const webpackConfig = Object.create(packConfig);
 
 // Lint JavaScript
 gulp.task('lint', () =>
@@ -46,7 +45,7 @@ gulp.task("webpack", (callback) => {
     });
 });
 
-gulp.task("webpack-dev-server", function(callback) {
+gulp.task("webpack-dev-server", (callback) => {
     // Start a webpack-dev-server
     var compiler = webpack(webpackConfig);
 
@@ -55,7 +54,7 @@ gulp.task("webpack-dev-server", function(callback) {
         stats: {
             colors: true
         }
-    }).listen(8080, "localhost", function(err) {
+    }).listen(8080, "localhost", (err) => {
         if (err) throw new gutil.PluginError("webpack-dev-server", err);
         $.util.log("[webpack-dev-server]", "http://localhost:8080/webpack-dev-server/index.html");
     });
