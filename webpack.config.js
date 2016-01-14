@@ -1,14 +1,15 @@
 var webpack = require("webpack");
 var autoprefixer = require('autoprefixer');
 module.exports = {
-    entry: './app/script/app.js',
+    context: __dirname + "/app",
+    entry: __dirname + '/app/script/app.js',
     output: {
         // Absolute output directory
-        path: "build",
+        path: __dirname + "/build",
 
         // Output path from the view of the page
         // Uses webpack-dev-server in development
-        publicPath: "build/",
+        publicPath: __dirname + "/build/",
 
         // Filename for entry points
         // Only adds hash in build mode
