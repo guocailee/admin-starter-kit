@@ -1,5 +1,6 @@
 'use strict';
 import gulp from 'gulp';
+import gutil from 'gulp-util';
 import del from 'del';
 import browserSync from 'browser-sync';
 import gulpLoadPlugins from 'gulp-load-plugins';
