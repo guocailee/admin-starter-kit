@@ -2,7 +2,10 @@ var webpack = require("webpack");
 var autoprefixer = require('autoprefixer');
 module.exports = {
     context: __dirname + "/app",
-    entry: __dirname + '/app/script/app.js',
+    entry: {
+        app: __dirname + '/app/script/app.js',
+        vendors: ['angular', 'angular-animate', 'angular-material']
+    },
     output: {
         // Absolute output directory
         path: __dirname + "/build",
@@ -18,6 +21,10 @@ module.exports = {
         // Filename for non-entry points
         // Only adds hash in build mode
         chunkFilename: '[name].bundle.[hash].js'
+
+    },
+    externals: {
+        "bundle!angular": "angular"
     },
     module: {
         loaders: [{
@@ -53,5 +60,8 @@ module.exports = {
             ]
         )];
     },
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
+    ],
     devtool: 'source-map'
 };
