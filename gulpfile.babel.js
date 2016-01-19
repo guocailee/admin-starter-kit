@@ -21,8 +21,7 @@ gulp.task('lint', () =>
 // Copy all files at the root level (app)
 gulp.task('copy', () =>
     gulp.src([
-        'app/*',
-        '!app/*.html'
+        'app/**/*.html'
     ], {
         dot: true
     }).pipe(gulp.dest('build'))
@@ -35,7 +34,7 @@ gulp.task('copy', () =>
 gulp.task('clean', cb => del(['.tmp', 'build/*', '!build/.git'], {
     dot: true
 }));
-gulp.task("webpack", (callback) => {
+gulp.task("webpack",['clean'], (callback) => {
     // run webpack
     webpack(webpackConfig, (err, stats) => {
         if (err) throw new $.util.PluginError("webpack", err);
@@ -51,11 +50,11 @@ gulp.task("webpack-dev-server", (callback) => {
     var compiler = webpack(webpackConfig);
 
     new WebpackDevServer(compiler, {
-        publicPath: "/" + webpackConfig.output.publicPath,
+        publicPath: webpackConfig.output.publicPath,
         stats: {
             colors: true
         }
-    }).listen(8080, "localhost", (err) => {
+    }).listen(9000, "localhost", (err) => {
         if (err) throw new gutil.PluginError("webpack-dev-server", err);
         $.util.log("[webpack-dev-server]", "http://localhost:8080/webpack-dev-server/index.html");
     });
