@@ -25,16 +25,13 @@ module.exports = {
     chunkFilename: '[name].bundle.[hash].js'
 
   },
-  externals: {
-    angular: "angular"
-  },
   module: {
     loaders: [{
       test: /\.css$/,
-      loader: "style-loader!css-loader!postcss-loader"
+      loader: ExtractTextPlugin.extract("style-loader!css-loader!postcss-loader")
     }, {
       test: /\.scss$/,
-      loader: "style-loader!css-loader!postcss-loader!sass-loader"
+      loader: ExtractTextPlugin.extract("style-loader!css-loader!postcss-loader!sass-loader")
     }, {
       test: /\.js$/,
       exclude: /(node_modules|bower_components)/,
@@ -63,6 +60,7 @@ module.exports = {
     )];
   },
   plugins: [
+    new ExtractTextPlugin("styles/app.css"),
     new HtmlWebpackPlugin({
       template: 'app/index.html',
       inject: 'body'

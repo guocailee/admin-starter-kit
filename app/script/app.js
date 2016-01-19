@@ -1,6 +1,7 @@
-import angular from 'angular';
-import angularAnimate from 'angular-animate';
-import angularMaterial from 'angular-material';
+'use strict';
+
 import mainScss from './../styles/app.scss';
-mainScss;
-angular.module('app', []);
+
+export default angular.module('app', [() => {
+  console.log('run app');
+}]).name;
