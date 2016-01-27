@@ -5,7 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   context: __dirname + "/app",
   entry: {
-    app: __dirname + '/app/scripts/app.js',
+    app: __dirname + '/app/scripts/main.js',
     vendors: ['angular', 'angular-animate', 'angular-material']
   },
   output: {
