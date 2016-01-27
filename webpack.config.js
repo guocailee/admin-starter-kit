@@ -60,7 +60,7 @@ module.exports = {
     )];
   },
   plugins: [
-    new ExtractTextPlugin("styles/app.css"),
+    new ExtractTextPlugin("styles/main.css"),
     new HtmlWebpackPlugin({
       template: 'app/index.html',
       inject: 'body'
