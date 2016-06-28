@@ -2,6 +2,8 @@ var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
+var precss = require('precss')
+var autoprefixer = require('autoprefixer')
 
 module.exports = {
   entry: {
@@ -32,7 +34,7 @@ module.exports = {
     }],
     loaders: [{
       test: /\.js$/,
-      loader: 'babel',
+      loader: 'ng-annotate!babel',
       include: projectRoot,
       exclude: /node_modules/
     }, {
@@ -57,7 +59,7 @@ module.exports = {
   eslint: {
     formatter: require('eslint-friendly-formatter')
   },
-  vue: {
-    loaders: utils.cssLoaders()
+  postcss: function () {
+    return [precss, autoprefixer({ browsers: ['last 2 versions'] })]
   }
 }
