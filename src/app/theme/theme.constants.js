@@ -1,3 +1,8 @@
+/**
+ *  @author guocailee
+ *  @Date   2016-06-29
+ */
+
 var IMAGES_ROOT = 'assets/img/'
 
 // SASS mix function

@@ -1,3 +1,7 @@
+/**
+ *  @author guocailee
+ *  @Date   2016-06-29
+ */
 var basic = {
   default: '#ffffff',
   defaultText: '#666666',

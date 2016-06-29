@@ -1,3 +1,7 @@
+/**
+ *  @author guocailee
+ *  @Date   2016-06-29
+ */
 export default function ($q) {
   return {
     loadImg: function (src) {

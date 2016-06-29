@@ -17,7 +17,8 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
   },
   "globals": {
-    "angular": true
+    "angular": true,
+    "$":true
   },
   "env": {
     "browser": true,
