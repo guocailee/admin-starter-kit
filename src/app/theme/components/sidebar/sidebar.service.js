@@ -28,7 +28,6 @@ export default function () {
           })
           item.subMenu = children.length ? children : null
         })
-
         return menuItems.concat(staticMenuItems)
       }
 

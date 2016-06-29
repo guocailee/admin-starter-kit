@@ -2,8 +2,8 @@
  *  @author guocailee
  *  @Date   2016-06-29
  */
-export default function ($scope, baSidebarService) {
-  $scope.menuItems = baSidebarService.getMenuItems()
+export default function ($scope, sidebarService) {
+  $scope.menuItems = sidebarService.getMenuItems()
   $scope.defaultSidebarState = $scope.menuItems[0].stateRef
 
   $scope.hoverItem = function ($event) {
@@ -14,8 +14,8 @@ export default function ($scope, baSidebarService) {
   }
 
   $scope.$on('$stateChangeSuccess', function () {
-    if (baSidebarService.canSidebarBeHidden()) {
-      baSidebarService.setMenuCollapsed(true)
+    if (sidebarService.canSidebarBeHidden()) {
+      sidebarService.setMenuCollapsed(true)
     }
   })
 }

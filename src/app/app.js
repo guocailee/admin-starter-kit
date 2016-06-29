@@ -10,6 +10,7 @@ import './pages/pages.module'
 // 定义程序主应用
 const app = angular.module('zk.app', [
   'ngAnimate',
+  'ui.router',
   'ui.bootstrap',
   'zk.theme',
   'zk.common',

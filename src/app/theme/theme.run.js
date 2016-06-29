@@ -2,7 +2,7 @@
  *  @author guocailee
  *  @Date   2016-06-29
  */
-export default function ($timeout, $rootScope, layoutPaths, preloader, $q, baSidebarService, themeLayoutSettings) {
+export default function ($timeout, $rootScope, layoutPaths, preloader, $q, sidebarService, themeLayoutSettings) {
   var whatToWait = [
     preloader.documentLoad(),
     $timeout(3000)
@@ -28,5 +28,5 @@ export default function ($timeout, $rootScope, layoutPaths, preloader, $q, baSid
     }
   }, 7000)
 
-  $rootScope.$baSidebarService = baSidebarService
+  $rootScope.$sidebarService = sidebarService
 }

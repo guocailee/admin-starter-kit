@@ -3,13 +3,13 @@
  *  @Date   2016-06-29
  */
 import $ from 'jquery'
-import zkSidebarHtmlUrl from 'ngtemplate!html!./zk-sidebar.html'
-export default function ($timeout, zkSidebarService, baUtil, layoutSizes) {
+import zkSidebarHtmlUrl from 'ngtemplate!html!./sidebar.html'
+export default function ($timeout, sidebarService, themeUtil, layoutSizes) {
   var jqWindow = $(window)
   return {
     restrict: 'E',
     templateUrl: zkSidebarHtmlUrl,
-    controller: 'zkSidebarCtrl',
+    controller: 'sidebarCtrl',
     link: function (scope, el) {
       scope.menuHeight = el[0].childNodes[0].clientHeight - 84
       jqWindow.on('click', _onWindowClick)
@@ -21,25 +21,25 @@ export default function ($timeout, zkSidebarService, baUtil, layoutSizes) {
       })
 
       function _onWindowClick ($evt) {
-        if (!baUtil.isDescendant(el[0], $evt.target) &&
+        if (!themeUtil.isDescendant(el[0], $evt.target) &&
           !$evt.originalEvent.$sidebarEventProcessed &&
-          !zkSidebarService.isMenuCollapsed() &&
-          zkSidebarService.canSidebarBeHidden()) {
+          !sidebarService.isMenuCollapsed() &&
+          sidebarService.canSidebarBeHidden()) {
           $evt.originalEvent.$sidebarEventProcessed = true
           $timeout(function () {
-            zkSidebarService.setMenuCollapsed(true)
+            sidebarService.setMenuCollapsed(true)
           }, 10)
         }
       }
 
       // watch window resize to change menu collapsed state if needed
       function _onWindowResize () {
-        var newMenuCollapsed = zkSidebarService.shouldMenuBeCollapsed()
+        var newMenuCollapsed = sidebarService.shouldMenuBeCollapsed()
         var newMenuHeight = _calculateMenuHeight()
-        if (newMenuCollapsed !== zkSidebarService.isMenuCollapsed() || scope.menuHeight !== newMenuHeight) {
+        if (newMenuCollapsed !== sidebarService.isMenuCollapsed() || scope.menuHeight !== newMenuHeight) {
           scope.$apply(function () {
             scope.menuHeight = newMenuHeight
-            zkSidebarService.setMenuCollapsed(newMenuCollapsed)
+            sidebarService.setMenuCollapsed(newMenuCollapsed)
           })
         }
       }

@@ -15,7 +15,7 @@ import themeConfig from './theme.config'
 import themeRun from './theme.run'
 import themeService from './theme.service'
 import themeConstants from './theme.constants'
-import baUtil from './services/ba.util'
+import themeUtil from './services/theme.util'
 import fileReader from './services/fileReader'
 import preloader from './services/preloader'
 
@@ -36,7 +36,7 @@ theme.constant('layoutSizes', themeConstants.layoutSizes)
   .constant('layoutPaths', themeConstants.layoutPaths)
   .constant('colorHelper', themeConstants.colorHelper)
 theme.service('themeLayoutSettings', themeService)
-theme.service('baUtil', baUtil)
+theme.service('themeUtil', themeUtil)
 theme.service('fileReader', fileReader)
 theme.service('preloader', preloader)
 theme.run(themeRun)

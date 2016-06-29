@@ -1,0 +1,22 @@
+<div class="zk-wizard">
+    <div class="zk-wizard-navigation-container">
+        <div ng-repeat="t in $zkWizardController.tabs" class="zk-wizard-navigation {{$zkWizardController.tabNum == $index ? 'active' : ''}}" ng-click="$zkWizardController.selectTab($index)">
+            {{t.title}}
+        </div>
+    </div>
+    <div class="progress zk-wizard-progress">
+        <div class="progress-bar progress-bar-danger active" role="progressbar" aria-valuemin="0" aria-valuemax="100" ng-style="{width: $zkWizardController.progress + '%'}">
+        </div>
+    </div>
+    <div class="steps" ng-transclude></div>
+    <nav>
+        <ul class="pager zk-wizard-pager">
+            <li class="previous">
+                <button ng-disabled="$zkWizardController.isFirstTab()" ng-click="$zkWizardController.previousTab()" type="button" class=" btn btn-primary"><span aria-hidden="true">&larr;</span> previous</button>
+            </li>
+            <li class="next">
+                <button ng-disabled="$zkWizardController.isLastTab()" ng-click="$zkWizardController.nextTab()" type="button" class="btn btn-primary">next <span aria-hidden="true">&rarr;</span></button>
+            </li>
+        </ul>
+    </nav>
+</div>
