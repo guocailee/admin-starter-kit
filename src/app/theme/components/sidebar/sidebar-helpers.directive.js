@@ -9,7 +9,9 @@ function zkSidebarToggleMenu (sidebarService) {
     restrict: 'A',
     link: function (scope, elem) {
       elem.on('click', function ($evt) {
-        $evt.originalEvent.$sidebarEventProcessed = true
+        if ($evt.originalEvent) {
+          $evt.originalEvent.$sidebarEventProcessed = true
+        }
         scope.$apply(function () {
           sidebarService.toggleMenuCollapsed()
         })

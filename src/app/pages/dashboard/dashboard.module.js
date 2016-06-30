@@ -13,7 +13,7 @@ function routeConfig ($stateProvider) {
       templateUrl: dashboardHtml,
       title: '首页',
       sidebarMeta: {
-        icon: 'ion-android-home',
+        icon: 'fa fa-home',
         order: 0
       }
     })

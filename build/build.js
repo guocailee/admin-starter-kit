@@ -10,11 +10,14 @@ var webpackConfig = require('./webpack.prod.conf')
 
 console.log(
   '  Tip:\n' +
-  '  Built files are meant to be served over an HTTP server.\n' +
-  '  Opening index.html over file:// won\'t work.\n'
+  '  编译后的文件，只能在托管在HTTP  Server\n' +
+  '  如果文件管理中打开index.html,如:file:// 是会有些资源无法加载的\n'
+)
+console.warn(
+  '  请在编译成功后，执行npm run dist，并打开浏览器查看编译后的文件运行是否有误\n'
 )
 
-var spinner = ora('building for production...')
+var spinner = ora('开始为生产环境编译文件...')
 spinner.start()
 
 var assetsPath = path.join(config.build.assetsRoot, config.build.assetsSubDirectory)
