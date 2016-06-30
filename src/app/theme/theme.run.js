@@ -3,6 +3,7 @@
  *  @Date   2016-06-29
  */
 export default function ($timeout, $rootScope, layoutPaths, preloader, $q, sidebarService, themeLayoutSettings) {
+  'ngInject'
   var whatToWait = [
     preloader.documentLoad(),
     $timeout(3000)

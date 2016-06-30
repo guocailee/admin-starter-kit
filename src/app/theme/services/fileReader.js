@@ -3,6 +3,7 @@
  *  @Date   2016-06-29
  */
 export default function ($q) {
+  'ngInject'
   var onLoad = function (reader, deferred, scope) {
     return function () {
       scope.$apply(function () {

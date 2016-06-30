@@ -3,6 +3,7 @@
  *  @Date   2016-06-29
  */
 export default function ($timeout) {
+  'ngInject'
   return {
     restrict: 'EA',
     template: '<div></div>',

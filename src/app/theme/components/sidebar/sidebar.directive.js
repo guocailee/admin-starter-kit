@@ -4,7 +4,9 @@
  */
 import $ from 'jquery'
 import zkSidebarHtmlUrl from 'ngtemplate!html!./sidebar.html'
+
 export default function ($timeout, sidebarService, themeUtil, layoutSizes) {
+  'ngInject'
   var jqWindow = $(window)
   return {
     restrict: 'E',

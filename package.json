@@ -8,6 +8,7 @@
     "dev": "node build/dev.server.js",
     "dist": "node build/dist.server.js",
     "build": "node build/build.js",
+    "clean": "node build/clean.js",
     "unit": "karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
@@ -26,6 +27,7 @@
     "angular-ui-bootstrap": "^1.3.3",
     "angular-ui-router": "^0.3.1",
     "bootstrap-sass": "^3.3.6",
+    "font-awesome": "^4.6.3",
     "jquery": "^3.0.0"
   },
   "dependencies": {
@@ -52,6 +54,7 @@
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.4",
+    "font-awesome-webpack": "0.0.4",
     "function-bind": "^1.0.2",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.8.1",
@@ -67,6 +70,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.24",
     "karma-webpack": "^1.7.0",
+    "less": "^2.7.1",
     "lolex": "^1.4.0",
     "mocha": "^2.4.5",
     "ng-annotate-loader": "^0.1.0",

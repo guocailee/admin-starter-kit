@@ -9,8 +9,8 @@ export default function () {
     staticMenuItems.push.apply(staticMenuItems, arguments)
   }
 
-  /** @ngInject */
   this.$get = function ($state, layoutSizes) {
+    'ngInject'
     return new _factory()
 
     function _factory () {

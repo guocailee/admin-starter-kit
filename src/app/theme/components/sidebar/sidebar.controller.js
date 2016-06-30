@@ -3,6 +3,7 @@
  *  @Date   2016-06-29
  */
 export default function ($scope, sidebarService) {
+  'ngInject'
   $scope.menuItems = sidebarService.getMenuItems()
   $scope.defaultSidebarState = $scope.menuItems[0].stateRef
 

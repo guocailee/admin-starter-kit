@@ -28,6 +28,7 @@ var dashboardColors = {
 }
 
 export default function (colorHelper) {
+  'ngInject'
   var conf = {
     theme: {
       blur: false

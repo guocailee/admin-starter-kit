@@ -3,6 +3,7 @@
  *  @Date   2016-06-29
  */
 export default function ($q) {
+  'ngInject'
   return {
     loadImg: function (src) {
       var d = $q.defer()

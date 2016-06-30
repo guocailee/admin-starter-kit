@@ -3,6 +3,7 @@
  *  @Date   2016-06-29
  */
 export default function ($scope) {
+  'ngInject'
   var vm = this
   vm.tabs = []
 

@@ -3,9 +3,10 @@
  *  @Date   2016-06-29
  */
 
-/** @ngInject */
 import dashboardHtml from 'ngtemplate!html!./dashboard.html'
+
 function routeConfig ($stateProvider) {
+  'ngInject'
   $stateProvider
     .state('dashboard', {
       url: '/dashboard',

@@ -5,6 +5,7 @@
 
 import contentTopHtml from 'ngtemplate!html!./content-top.html'
 export default function ($location, $state) {
+  'ngInject'
   return {
     restrict: 'E',
     templateUrl: contentTopHtml,

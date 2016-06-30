@@ -2,7 +2,9 @@
  *  @author guocailee
  *  @Date   2016-06-29
  */
+/** @ngInject */
 export default function ($timeout) {
+  'ngInject'
   return {
     link: function (scope, element) {
       $timeout(function () {

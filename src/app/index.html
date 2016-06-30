@@ -26,7 +26,10 @@
 </head>
 
 <body>
-    <main ng-if="$pageFinishedLoading" ng-class="{ 'menu-collapsed': $baSidebarService.isMenuCollapsed() }">
+    <div id="preloader" ng-show="!$pageFinishedLoading">
+        <div></div>
+    </div>
+    <main ng-if="$pageFinishedLoading" ng-class="{ 'menu-collapsed': $sidebarService.isMenuCollapsed() }">
         <zk-sidebar></zk-sidebar>
         <zk-page-top></zk-page-top>
         <div class="al-main">
@@ -38,14 +41,11 @@
         <footer class="al-footer clearfix">
             <div class="al-footer-right"></div>
             <div class="al-footer-main clearfix">
-                <div class="al-copy">ZKteco 2016</div>
+                <!-- <div class="al-copy">ZKteco 2016</div> -->
             </div>
         </footer>
         <zk-back-top></zk-back-top>
     </main>
-    <div id="preloader" ng-show="!$pageFinishedLoading">
-        <div></div>
-    </div>
 </body>
 
 </html>

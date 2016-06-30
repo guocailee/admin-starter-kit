@@ -1,4 +1,27 @@
+/**
+ * @author: guocailee
+ * @date: 2016-06-30
+ */
 
+// @import 'themes/conf/color-scheme/zk-theme';
+// @import 'themes/conf/variables';
+@import 'themes/conf/mixins';
 @import 'base/base';
+@import 'base/typography';
+@import 'themes/components/accordion';
+@import 'themes/components/back-top';
+@import 'themes/components/buttons';
+@import 'themes/components/content-top';
+@import 'themes/components/icons';
+@import 'themes/components/msg-center';
+@import 'themes/components/page-top';
+@import 'themes/components/preloader';
+@import 'themes/components/sidebar';
+@import 'themes/components/table';
+@import 'themes/components/tree';
+@import 'themes/components/widgets';
+@import 'themes/components/wizard';
+@import 'bootstrap/panel';
+@import 'bootstrap/tabs';
 @import 'layout/header';
-@import 'pages/dashboard';
+@import 'layout/html';

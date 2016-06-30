@@ -3,6 +3,7 @@
  *  @Date   2016-06-29
  */
 export default function ($timeout, $parse) {
+  'ngInject'
   return {
     link: function (scope, element, attrs) {
       var model = $parse(attrs.autoFocus)

@@ -3,6 +3,7 @@
  *  @Date   2016-06-29
  */
 export default function (zkPanel, zkConfig) {
+  'ngInject'
   return angular.extend({}, zkPanel, {
     template: function (el, attrs) {
       var res = '<div  class="panel ' + (zkConfig.theme.blur ? 'panel-blur' : '') + ' full-invisible ' + (attrs.baPanelClass || '')

@@ -4,6 +4,7 @@
  */
 
 function zkSidebarToggleMenu (sidebarService) {
+  'ngInject'
   return {
     restrict: 'A',
     link: function (scope, elem) {
@@ -17,8 +18,8 @@ function zkSidebarToggleMenu (sidebarService) {
   }
 }
 
-/** @ngInject */
 function zkSidebarCollapseMenu (sidebarService) {
+  'ngInject'
   return {
     restrict: 'A',
     link: function (scope, elem) {
@@ -34,7 +35,6 @@ function zkSidebarCollapseMenu (sidebarService) {
   }
 }
 
-/** @ngInject */
 function zkSidebarTogglingItem () {
   return {
     restrict: 'A',
@@ -42,8 +42,8 @@ function zkSidebarTogglingItem () {
   }
 }
 
-/** @ngInject */
 function zkSidebarTogglingItemCtrl ($scope, $element, $attrs, $state, sidebarService) {
+  'ngInject'
   var vm = this
   var menuItem = vm.$$menuItem = $scope.$eval($attrs.baSidebarTogglingItem)
   if (menuItem && menuItem.subMenu && menuItem.subMenu.length) {
@@ -93,6 +93,7 @@ function zkSidebarTogglingItemCtrl ($scope, $element, $attrs, $state, sidebarSer
 }
 
 function zkUiSrefTogglingSubmenu ($state) {
+  'ngInject'
   return {
     restrict: 'A',
     require: '^zkSidebarTogglingItem',
@@ -104,6 +105,7 @@ function zkUiSrefTogglingSubmenu ($state) {
 }
 
 function zkUiSrefToggler (sidebarService) {
+  'ngInject'
   return {
     restrict: 'A',
     require: '^zkSidebarTogglingItem',
