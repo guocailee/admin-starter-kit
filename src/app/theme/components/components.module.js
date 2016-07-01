@@ -8,7 +8,7 @@ import './widgets/widgets.module'
 import './wizard/wizard.module'
 import './page-top/page-top.module'
 import './content-top/content-top.module'
-angular.module('zk.theme.components', [
+let components = angular.module('zk.theme.components', [
   'zk.theme.components.sidebar',
   'zk.theme.components.panel',
   'zk.theme.components.widgets',
@@ -16,3 +16,5 @@ angular.module('zk.theme.components', [
   'zk.theme.components.pageTop',
   'zk.theme.components.contentTop'
 ])
+
+export default components.name

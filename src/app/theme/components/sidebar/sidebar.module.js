@@ -17,3 +17,5 @@ sidebar.directive('zkSidebarToggleMenu', sidebarHelper.zkSidebarToggleMenu)
   .directive('zkUiSrefTogglingSubmenu', sidebarHelper.zkUiSrefTogglingSubmenu)
   .directive('zkSidebarTogglingItem', sidebarHelper.zkSidebarTogglingItem)
   .directive('zkSidebarCollapseMenu', sidebarHelper.zkSidebarCollapseMenu)
+
+export default sidebar.name

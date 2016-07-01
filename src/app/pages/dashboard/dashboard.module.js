@@ -19,5 +19,5 @@ function routeConfig ($stateProvider) {
     })
 }
 
-angular.module('zk.pages.dashboard', [])
-  .config(routeConfig)
+export default angular.module('zk.pages.dashboard', [])
+  .config(routeConfig).name
