@@ -7,7 +7,8 @@ var autoprefixer = require('autoprefixer')
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: './src/entrys/app.js',
+    login: './src/entrys/login.js'
   },
   output: {
     path: config.build.assetsRoot,

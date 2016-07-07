@@ -13,7 +13,7 @@ import 'angular-ui-bootstrap'
 
 import './../app/common/common.module'
 import './../app/theme/theme.module'
-import './../app/pages/pages.module'
+import './../app/home/pages/pages.module'
 
 // 定义程序主应用
 const app = angular.module('zk.app', [

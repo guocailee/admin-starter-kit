@@ -38,6 +38,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       filename: process.env.NODE_ENV === 'testing' ? 'index.html' : config.build.index,
       template: 'src/app/index.html',
       inject: true,
+      chunks: ['app'],
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -52,6 +53,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       filename: 'login.html',
       template: 'src/app/login.html',
       inject: true,
+      chunks: ['login'],
       minify: {
         removeComments: true,
         collapseWhitespace: true,
