@@ -1,5 +1,5 @@
-import loginCtrl from './loign.controller'
-import loginService from './loign.service'
+import loginCtrl from './login.controller'
+import loginService from './login.service'
 
 const login = angular.module('zk.loign', [])
 login.factory('loginService', loginService)
