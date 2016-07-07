@@ -17,5 +17,4 @@ var fetchUtil = function ($http, $q) {
     post
   }
 }
-fetchUtil.$inject = ['$http', '$q']
 export default fetchUtil
