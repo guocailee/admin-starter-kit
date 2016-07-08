@@ -3,8 +3,8 @@
  * @date: 2016-06-30
  */
 
-// @import 'themes/conf/color-scheme/zk-theme';
-// @import 'themes/conf/variables';
+@import 'themes/conf/color-scheme/zk-theme';
+@import 'themes/conf/variables';
 @import 'themes/conf/mixins';
 @import 'base/base';
 @import 'base/typography';
@@ -31,7 +31,5 @@
 @import 'themes/components/wizard';
 @import 'bootstrap/panel';
 @import 'bootstrap/tabs';
-@import 'layout/header';
-@import 'layout/html';
 @import 'pages/dashboard/dashboard';
 @import 'pages/dashboard/top-msg';
