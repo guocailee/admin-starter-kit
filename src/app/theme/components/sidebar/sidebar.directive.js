@@ -24,10 +24,10 @@ export default function ($timeout, sidebarService, themeUtil, layoutSizes) {
 
       function _onWindowClick ($evt) {
         if (!themeUtil.isDescendant(el[0], $evt.target) &&
-          !$evt.originalEvent.$sidebarEventProcessed &&
+          !sidebarService.getSidebarEventProcessed() &&
           !sidebarService.isMenuCollapsed() &&
           sidebarService.canSidebarBeHidden()) {
-          $evt.originalEvent.$sidebarEventProcessed = true
+          sidebarService.setSidebarEventProcessed(true)
           $timeout(function () {
             sidebarService.setMenuCollapsed(true)
           }, 10)

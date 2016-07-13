@@ -15,6 +15,7 @@ export default function () {
 
     function _factory () {
       var isMenuCollapsed = shouldMenuBeCollapsed()
+      var $sidebarEventProcessed = false
 
       this.getMenuItems = function () {
         var states = defineMenuItemStates()
@@ -45,7 +46,12 @@ export default function () {
       this.toggleMenuCollapsed = function () {
         isMenuCollapsed = !isMenuCollapsed
       }
-
+      this.getSidebarEventProcessed = function () {
+        return $sidebarEventProcessed
+      }
+      this.setSidebarEventProcessed = function (isProcessed) {
+        $sidebarEventProcessed = isProcessed
+      }
       this.getAllStateRefsRecursive = function (item) {
         var result = []
         _iterateSubItems(item)
