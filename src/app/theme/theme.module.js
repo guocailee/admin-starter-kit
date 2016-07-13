@@ -13,11 +13,10 @@ import './components/components.module'
 import themeConfigProvider from './theme.configProvider'
 import themeConfig from './theme.config'
 import themeRun from './theme.run'
-import themeService from './theme.service'
+import themeService from './services/theme.service'
 import themeConstants from './theme.constants'
 import themeUtil from './services/theme.util'
 import fileReader from './services/fileReader'
-import preloader from './services/preloader'
 
 import appImage from './filters/image/app-image'
 import kameleonImg from './filters/image/kameleon-img'
@@ -49,7 +48,6 @@ theme.filter('plainText', plainText)
 theme.service('themeLayoutSettings', themeService)
 theme.service('themeUtil', themeUtil)
 theme.service('fileReader', fileReader)
-theme.service('preloader', preloader)
 
 theme.run(themeRun)
 

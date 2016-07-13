@@ -1,3 +1,4 @@
+import './login.scss'
 import loginCtrl from './login.controller'
 import loginService from './login.service'
 

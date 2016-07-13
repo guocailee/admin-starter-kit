@@ -2,7 +2,7 @@
  *  @author guocailee
  *  @Date   2016-06-29
  */
-
+import './dashboard.scss'
 import dashboardHtml from 'ngtemplate!html!./dashboard.html'
 
 function routeConfig ($stateProvider) {

@@ -3,6 +3,7 @@
  *  @Date   2016-06-29
  */
 
+import './panel.scss'
 import panelService from './panel.service'
 import panelDirective from './panel.directive'
 import panelSelfDirective from './panel-self.directive'

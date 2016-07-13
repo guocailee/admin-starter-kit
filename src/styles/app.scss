@@ -3,33 +3,18 @@
  * @date: 2016-06-30
  */
 
-@import 'themes/conf/color-scheme/zk-theme';
-@import 'themes/conf/variables';
-@import 'themes/conf/mixins';
-@import 'base/base';
-@import 'base/typography';
-@import 'themes/components/alerts';
-@import 'themes/components/accordion';
-@import 'themes/components/back-top';
-@import 'themes/components/buttons';
-@import 'themes/components/content-top';
-@import 'themes/components/email';
-@import 'themes/components/form';
-@import 'themes/components/grid';
-@import 'themes/components/icons';
-@import 'themes/components/modal-notifications';
-@import 'themes/components/modals';
-@import 'themes/components/msg-center';
-@import 'themes/components/notifications';
-@import 'themes/components/page-top';
-@import 'themes/components/preloader';
-@import 'themes/components/sidebar';
-@import 'themes/components/slider';
-@import 'themes/components/table';
-@import 'themes/components/tree';
-@import 'themes/components/widgets';
-@import 'themes/components/wizard';
-@import 'bootstrap/panel';
+@import 'common';
+@import 'components/alerts';
+@import 'components/accordion';
+@import 'components/buttons';
+@import 'components/email';
+@import 'components/form';
+@import 'components/grid';
+@import 'components/icons';
+@import 'components/modal-notifications';
+@import 'components/modals';
+@import 'components/msg-center';
+@import 'components/notifications';
+@import 'components/table';
+@import 'components/tree';
 @import 'bootstrap/tabs';
-@import 'pages/dashboard/dashboard';
-@import 'pages/dashboard/top-msg';

@@ -2,6 +2,9 @@
  *  @author guocailee
  *  @Date   2016-06-29
  */
+
+import './sidebar.scss'
+
 import sidebarService from './sidebar.service'
 import sidebarCtrl from './sidebar.controller'
 import sidebarDirective from './sidebar.directive'

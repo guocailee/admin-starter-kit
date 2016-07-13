@@ -2,6 +2,7 @@ var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
+var appRoot = path.resolve(__dirname, '../src/app/')
 var precss = require('precss')
 var autoprefixer = require('autoprefixer')
 
@@ -20,7 +21,8 @@ module.exports = {
     fallback: [path.join(__dirname, '../node_modules')],
     alias: {
       'src': path.resolve(__dirname, '../src'),
-      'assets': path.resolve(__dirname, '../src/assets')
+      'assets': path.resolve(__dirname, '../src/assets'),
+      'styles': path.resolve(__dirname, '../src/styles')
     }
   },
   resolveLoader: {
