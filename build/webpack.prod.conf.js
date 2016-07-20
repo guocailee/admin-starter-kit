@@ -35,8 +35,8 @@ var webpackConfig = merge(baseWebpackConfig, {
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: process.env.NODE_ENV === 'testing' ? 'index.html' : config.build.index,
-      template: 'src/app/index.html',
+      filename: process.env.NODE_ENV === 'testing' ? 'home.html' : config.build.home,
+      template: 'src/app/home.html',
       inject: true,
       chunks: ['vendor', 'manifest', 'app'],
       minify: {
@@ -50,7 +50,22 @@ var webpackConfig = merge(baseWebpackConfig, {
       chunksSortMode: 'dependency'
     }),
     new HtmlWebpackPlugin({
-      filename: 'login.html',
+      filename: process.env.NODE_ENV === 'testing' ? 'index.html' : config.build.index,
+      template: 'src/app/index.html',
+      inject: true,
+      chunks: ['vendor', 'manifest', 'index'],
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true
+          // more options:
+          // https://github.com/kangax/html-minifier#options-quick-reference
+      },
+      // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+      chunksSortMode: 'dependency'
+    }),
+    new HtmlWebpackPlugin({
+      filename: process.env.NODE_ENV === 'testing' ? 'login.html' : config.build.login,
       template: 'src/app/login.html',
       inject: true,
       chunks: ['vendor', 'manifest', 'login'],

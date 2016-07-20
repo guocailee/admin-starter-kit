@@ -31,8 +31,13 @@ module.exports = merge(baseWebpackConfig, {
     new ExtractTextPlugin('[name].[contenthash].css'),
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: 'index.html',
+      filename: 'home.html',
       chunks: ['app'],
+      template: 'src/app/home.html',
+      inject: true
+    }), new HtmlWebpackPlugin({
+      filename: 'index.html',
+      chunks: ['index'],
       template: 'src/app/index.html',
       inject: true
     }), new HtmlWebpackPlugin({

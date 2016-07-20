@@ -22,6 +22,7 @@ import './../app/home/pages/pages.module'
 // 定义程序主应用
 const app = angular.module('zk.app', [
   'ngAnimate',
+  'pascalprecht.translate',
   'ui.router',
   'ui.bootstrap',
   'zk.theme',

@@ -2,32 +2,30 @@
  *  @author guocailee
  *  @Date   2016-06-29
  */
-import $ from 'jquery'
 import zkSidebarHtmlUrl from 'ngtemplate!html!./sidebar.html'
 
 export default function ($timeout, sidebarService, themeUtil, layoutSizes) {
   'ngInject'
-  var jqWindow = $(window)
+  var $window = angular.element(window)
   return {
     restrict: 'E',
     templateUrl: zkSidebarHtmlUrl,
     controller: 'sidebarCtrl',
     link: function (scope, el) {
       scope.menuHeight = el[0].childNodes[0].clientHeight - 84
-      jqWindow.on('click', _onWindowClick)
-      jqWindow.on('resize', _onWindowResize)
+      $window.on('click', _onWindowClick)
+      $window.on('resize', _onWindowResize)
 
       scope.$on('$destroy', function () {
-        jqWindow.off('click', _onWindowClick)
-        jqWindow.off('resize', _onWindowResize)
+        $window.off('click', _onWindowClick)
+        $window.off('resize', _onWindowResize)
       })
 
       function _onWindowClick ($evt) {
-        if (!themeUtil.isDescendant(el[0], $evt.target) &&
-          !sidebarService.getSidebarEventProcessed() &&
+        if ($evt.target !== sidebarService.getSidebarEventTarget() &&
+          !themeUtil.isDescendant(el[0], $evt.target) &&
           !sidebarService.isMenuCollapsed() &&
           sidebarService.canSidebarBeHidden()) {
-          sidebarService.setSidebarEventProcessed(true)
           $timeout(function () {
             sidebarService.setMenuCollapsed(true)
           }, 10)

@@ -9,7 +9,7 @@ function zkSidebarToggleMenu (sidebarService) {
     restrict: 'A',
     link: function (scope, elem) {
       elem.on('click', function ($evt) {
-        sidebarService.setSidebarEventProcessed(true)
+        sidebarService.setSidebarEventTarget($evt.target)
         scope.$apply(function () {
           sidebarService.toggleMenuCollapsed()
         })
@@ -24,7 +24,7 @@ function zkSidebarCollapseMenu (sidebarService) {
     restrict: 'A',
     link: function (scope, elem) {
       elem.on('click', function ($evt) {
-        sidebarService.setSidebarEventProcessed(true)
+        sidebarService.setSidebarEventTarget($evt.target)
         if (!sidebarService.isMenuCollapsed()) {
           scope.$apply(function () {
             sidebarService.setMenuCollapsed(true)

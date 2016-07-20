@@ -1,8 +1,11 @@
 import $ from 'jquery'
+import backTopHtml from 'ngtemplate!html!./back-top.html'
+import './jquery.backTop.js'
+
 export default function () {
   return {
     restrict: 'E',
-    templateUrl: 'app/theme/components/backTop/backTop.html',
+    templateUrl: backTopHtml,
     controller: function () {
       $('#backTop').backTop({
         'position': 200,

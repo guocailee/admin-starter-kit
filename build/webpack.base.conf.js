@@ -2,14 +2,14 @@ var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
-var appRoot = path.resolve(__dirname, '../src/app/')
 var precss = require('precss')
 var autoprefixer = require('autoprefixer')
 
 module.exports = {
   entry: {
     app: './src/entrys/app.js',
-    login: './src/entrys/login.js'
+    login: './src/entrys/login.js',
+    index: './src/entrys/index.js'
   },
   output: {
     path: config.build.assetsRoot,

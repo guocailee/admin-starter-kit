@@ -4,6 +4,7 @@
  */
 import './sidebar/sidebar.module'
 import './panel/panel.module'
+import './back-top/back-top.module'
 import './widgets/widgets.module'
 import './wizard/wizard.module'
 import './page-top/page-top.module'
@@ -16,7 +17,8 @@ let components = angular.module('zk.theme.components', [
   'zk.theme.components.wizard',
   'zk.theme.components.pageTop',
   'zk.theme.components.preloader',
-  'zk.theme.components.contentTop'
+  'zk.theme.components.contentTop',
+  'zk.theme.components.backTop'
 ])
 
 export default components.name
