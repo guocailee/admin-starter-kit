@@ -4,8 +4,10 @@
 
 ### 1.1. 依赖说明
 1. 操作系统
+
 > 并无特殊要求，但以体验上来说，Linux/Unix 优于 Windows
 2. NodeJS
+
 > 请到[NodeJS](https://nodejs.org/en/)下载最新版进行安装。
 
 ```bash
@@ -15,6 +17,7 @@ npm -v  # 查看对应的node包管理器版本
 
 ```
 3. cnpm安装
+
 > 由于npm使用国外资源，所以稳定性不佳。请用cnpm替换npm作为node的包管理器。详情请看:[cpm](https://npm.taobao.org/)
 
 ```bash
@@ -23,6 +26,7 @@ npm install cnpm -g # 安装cnpm
 
 
 4. bower安装
+
 >  bower是前端资源管理工具，如JQueryJS， AngularJS等等都是通过bower下载安装。
 
 ```bash 
@@ -30,6 +34,7 @@ cnpm install bower -g # 安装Gulp
 ```
 
 5. 项目依赖安装
+
 > 在项目根地址执行，如下命令进行安装即可。
 
 ```bash
@@ -45,6 +50,7 @@ cnpm install  # 安装工具依赖
 ### 1.2 命令
 
 * gulp build
+
 > 打包前端代码主要作用如下：
 1. 把.src/app目录下的JS扫描出来，并注入到html文件中。
 2. 对JS文件进行合并，压缩。
@@ -52,6 +58,7 @@ cnpm install  # 安装工具依赖
 
  
 * gulp serve
+
 > 启动服务器，以便可以在浏览器访问开发
 
 ### 1.3 目录结构说明
