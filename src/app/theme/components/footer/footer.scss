@@ -1,0 +1,16 @@
+@import '~styles/common';
+footer {
+  background-color: $footer-background;
+  padding-top: 30px;
+  .zk-copyright {
+    border-top: 1px solid #48474f;
+    margin-top: 15px;
+    p {
+      text-align: center;
+      color: #999;
+      margin-bottom: 0;
+      padding: 10px 0;
+      font-size: 1.4rem;
+    }
+  }
+}
