@@ -35,7 +35,23 @@ cnpm install  # 安装依赖
 ```
 
 ***At last:***
-由于项目用到scss，对其进行编译需要node-sass这个这个组件，底层依赖Python，所以在Windows环境下，需要安装[Python](https://www.python.org/)
+
+* 由于项目用到scss，对其进行编译需要node-sass这个这个组件，底层依赖Python，所以在Windows环境下，需要安装[Python](https://www.python.org/)
+* 实测在Windows下环境下，不能简单用cnpm安装依赖，请采用如下办法：
+
+```bash
+# first
+alias tnpm="npm --registry=https://registry.npm.taobao.org \
+--cache=$HOME/.npm/.cache/cnpm \
+--disturl=https://npm.taobao.org/dist \
+--userconfig=$HOME/.cnpmrc"
+# second
+tnpm installl
+
+# 如果出现问题一般时node-sass安装失败，请再执行: 
+tnpm install node-sass
+```
+> cnpm 采用了softlink方式，bootstrap-loader在寻找相对路径时，会出现问题
 
 ### 1.2 命令
 

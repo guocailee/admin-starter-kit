@@ -50,6 +50,8 @@
 │   │   ├── fonts                                 // 字体目录
 │   │   └── img                                   // 图片目录
 │   ├── entrys                                    // webpack代码入口
+│   ├── build                                     // webpack配置文件
+|   ├── config                                    // node enve配置
 │   ├── styles                                    // Sytles的代码位置,目结构与app类似,只能包含共用的styles,如Variables,Mixins 
 
 ├── .babelrc        // Babel配置
