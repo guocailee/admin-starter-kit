@@ -2,6 +2,24 @@
 var path = require('path')
 
 module.exports = {
+  htmlPlugins: [{
+    filename: 'home.html',
+    chunks: ['app'],
+    template: 'src/app/home.html',
+    inject: true
+  }, {
+    filename: 'index.html',
+    template: 'src/app/index.html',
+    inject: true,
+    chunks: ['index'],
+    // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+    chunksSortMode: 'dependency'
+  }, {
+    filename: 'login.html',
+    chunks: ['login'],
+    template: 'src/app/login.html',
+    inject: true
+  }],
   build: {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),
