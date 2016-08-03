@@ -50,5 +50,6 @@ theme.service('themeUtil', themeUtil)
 theme.service('fileReader', fileReader)
 
 theme.run(themeRun)
-
+var error = []
 export default theme.name
+
