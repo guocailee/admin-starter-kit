@@ -1,3 +1,5 @@
+image: server3-ci-nodejs-runner
+
 before_script:
   - npm -g install eslint --silent
   - npm set progress=false
