@@ -2,9 +2,8 @@ before_script:
   - npm -g install eslint --silent
   - npm set progress=false
   - npm install --silent
-
 stages:
-  - lint
+  - test
   - build
   - clean_up
 
