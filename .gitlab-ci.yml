@@ -1,4 +1,4 @@
-image: server3-ci-nodejs-runner
+image: nodejs
 
 before_script:
   - npm -g install eslint --silent
