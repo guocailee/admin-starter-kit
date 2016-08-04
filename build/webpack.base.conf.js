@@ -6,11 +6,7 @@ var precss = require('precss')
 var autoprefixer = require('autoprefixer')
 
 module.exports = {
-  entry: {
-    app: './src/entrys/app.js',
-    login: './src/entrys/login.js',
-    index: './src/entrys/index.js'
-  },
+  entry: config.entrys,
   output: {
     path: config.build.assetsRoot,
     publicPath: config.build.assetsPublicPath,

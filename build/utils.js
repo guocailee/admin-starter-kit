@@ -9,7 +9,7 @@ exports.assetsPath = function (_path) {
 exports.cssLoaders = function (options) {
   options = options || {}
     // generate loader string to be used with extract text plugin
-  function generateLoaders (loaders) {
+  function generateLoaders(loaders) {
     var sourceLoader = loaders.map(function (loader) {
       var extraParamChar
       if (/\?/.test(loader)) {
@@ -66,7 +66,7 @@ exports.generateHtmlPlugins = function () {
           // more options:
           // https://github.com/kangax/html-minifier#options-quick-reference
       }
-      htmlPluginOption.chunks = ['vendor', 'manifest'].concat(htmlPluginOption.chunks)
+      htmlPluginOption.chunks = ['manifest'].concat(htmlPluginOption.chunks)
       htmlPluginOption.filename = path.resolve(__dirname, '../dist/' + htmlPluginOption.filename)
     }
     return new HtmlWebpackPlugin(htmlPluginOption)

@@ -15,18 +15,4 @@ import 'angular-translate'
 import 'angular-ui-router'
 import 'angular-ui-bootstrap'
 
-import './../app/common/common.module'
-import './../app/theme/theme.module'
-import './../app/home/pages/pages.module'
-
-// 定义程序主应用
-const app = angular.module('zk.app', [
-  'ngAnimate',
-  'pascalprecht.translate',
-  'ui.router',
-  'ui.bootstrap',
-  'zk.theme',
-  'zk.common',
-  'zk.pages'
-])
-export default app.name
+import './../app/home/home.module'

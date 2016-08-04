@@ -26,7 +26,7 @@ var webpackConfig = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('[name].[contenthash].css')
+    new ExtractTextPlugin(utils.assetsPath('css/[name].[contenthash].css'))
     // https://github.com/ampedandwired/html-webpack-plugin
   ]
 }

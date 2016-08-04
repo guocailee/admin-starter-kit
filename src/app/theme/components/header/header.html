@@ -1,45 +1,197 @@
-<header>
-    <nav id="menu" class="navbar navbar-light navbar-fixed-top bd-navbar alternative nav-transform">
-        <div class="container nav-vertical">
-            <a class="navbar-brand" href="http://teenmade.com">
-                <img class="brand-logo default" src="http://teenmade.com/img/tm-logo-red.png">
-                <img class="brand-logo alternative" src="http://teenmade.com/img/tm-logo.png">
-            </a>
-            <ul class="nav navbar-nav nav-center">
-                <li class="nav-item">
-                    <a class="nav-link " href="http://teenmade.com/discover">Discover</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="http://teenmade.com/services">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="http://teenmade.com/shops">Shops</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="http://blog.teenmade.com" target="_blank">Blog</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav pull-right">
-                <li class="nav-item">
-                    <button class="nav-link btn-link" data-toggle="modal" data-target="#login">Login</button>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-primary-outline btn-round" data-toggle="modal" data-target="#signup">Signup</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div id="banner">
-        <div class="wrapper"></div>
-        <div class="content">
-            <p class="top-p relief">100% Teen Made</p>
-            <h1 class="relief">
-                    <span class="text">Apparel</span><span class="cursor">|</span>
-                </h1>
-            <p class="relief">Buy Teen <a href="http://teenmade.com/discover">Products</a> &amp; Hire Professional Teen <a href="http://teenmade.com/services">Services</a></p>
-            <div class="bottom-content" style="position: absolute; bottom:-145px; width:100%;">
-                <a href="#!" data-toggle="modal" data-target="#signup" class="btn btn-primary" style="font-weight: 300;">Teens Join and Launch Your Buiness Here</a>
+<header id="site-header" class="site-header " ng-class="{'transparent': !isScrolled}">
+    <div class="container">
+        <nav class="navbar" role="navigation">
+            <div class="navbar-header">
+                <button class="btn btn-primary navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">菜单</button>
+                <a class="navbar-brand" href="./" data-gta="event" data-category="out-top-nav" data-action="tb logo">JusTalk Cloud 云通讯</a>
             </div>
-        </div>
+            <div class="collapse navbar-collapse">
+                <div class="items-wrap">
+                    <ul class="navbar-button list-inline">
+                        <li>
+                            <a class="btn btn-default btn-sm login" href="./login/signin.php" data-gta="event" data-category="out-top-nav" data-action="login">登录</a>
+                        </li>
+                        <li>
+                            <a class="btn btn-default btn-sm signup" href="./login/signup.php" data-gta="event" data-category="out-top-nav" data-action="signup">免费注册</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-button list-inline">
+                        <li class="switch-locale-wrap">
+                            <div class="dropdown switch-locale">
+                                <a class="dropdown-toggle zh" data-toggle=" ">最新动态</a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                    <li>
+                                        <a href="http://justalkcloud.lofter.com/" target="_blank">
+                                            <div style="float: left;">
+                                                <div class="gonggao"></div>
+                                            </div>
+                                            <div style="float:left;">最新公告</div>
+                                            <div style="clear:both;"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./news/">
+                                            <div style="float: left;">
+                                                <div class="news"></div>
+                                            </div>
+                                            <div style="float:left;">媒体报道</div>
+                                            <div style="clear:both;"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-button list-inline">
+                        <li class="switch-locale-wrap">
+                            <div class="dropdown switch-locale">
+                                <a class="dropdown-toggle zh" data-toggle=" ">支持</a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                    <li>
+                                        <a href="./docs/" target="_blank">
+                                            <div style="float: left;">
+                                                <div class="docs"></div>
+                                            </div>
+                                            <div style="float:left;">文档</div>
+                                            <div style="clear:both;"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./faq/">
+                                            <div style="float: left;">
+                                                <div class="faq"></div>
+                                            </div>
+                                            <div style="float:left;">常见问题</div>
+                                            <div style="clear:both;"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://justalkcloud.com:8082/bbs/">
+                                            <div style="float: left;">
+                                                <div class="sq"></div>
+                                            </div>
+                                            <div style="float:left;">社区</div>
+                                            <div style="clear:both;"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./support/sales.php">
+                                            <div style="float: left;">
+                                                <div class="contact"></div>
+                                            </div>
+                                            <div style="float:left;">联系我们</div>
+                                            <div style="clear:both;"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="./price/" data-gta="event" data-category="out-top-nav">价格</a>
+                        </li>
+                        <li>
+                            <a href="./download/" data-gta="event" data-category="out-top-nav">下载</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-button list-inline">
+                        <li class="switch-locale-wrap">
+                            <div class="dropdown switch-locale">
+                                <a class="dropdown-toggle zh" data-toggle=" ">解决方案</a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                    <li>
+                                        <a href="./solution/e-learning.php">
+                                            <div style="float: left;">
+                                                <div class="sol_jy"></div>
+                                            </div>
+                                            <div style="float:left;">在线教育</div>
+                                            <div style="clear:both;"></div>
+                                        </a>
+                                    </li>
+                                    <li style="display:none">
+                                        <a href="./solution/mhealth.php">
+                                            <div style="float: left;">
+                                                <div class="sol_yl"></div>
+                                            </div>
+                                            <div style="float:left;">移动医疗</div>
+                                            <div style="clear:both;"></div>
+                                        </a>
+                                    </li>
+                                    <li style="display:none">
+                                        <a href="./solution/social_im.php">
+                                            <div style="float: left;">
+                                                <div class="sol_sjtx"></div>
+                                            </div>
+                                            <div style="float:left;">社交通讯</div>
+                                            <div style="clear:both;"></div>
+                                        </a>
+                                    </li>
+                                    <li style="display:none">
+                                        <a href="./solution/o2o.php">
+                                            <div style="float: left;">
+                                                <div class="sol_o2o"></div>
+                                            </div>
+                                            <div style="float:left;">O2O</div>
+                                            <div style="clear:both;"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-button list-inline">
+                        <li class="switch-locale-wrap">
+                            <div class="dropdown switch-locale">
+                                <a class="dropdown-toggle zh" data-toggle=" ">应用场景</a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                    <li>
+                                        <a href="./scenario/e-learning.php">
+                                            <div style="float: left;">
+                                                <div class="jy"></div>
+                                            </div>
+                                            <div style="float:left;">在线教育</div>
+                                            <div style="clear:both;"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./scenario/mhealth.php">
+                                            <div style="float: left;">
+                                                <div class="yl"></div>
+                                            </div>
+                                            <div style="float:left;">移动医疗</div>
+                                            <div style="clear:both;"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./scenario/social_im.php">
+                                            <div style="float: left;">
+                                                <div class="sjtx"></div>
+                                            </div>
+                                            <div style="float:left;">社交通讯</div>
+                                            <div style="clear:both;"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./scenario/o2o.php">
+                                            <div style="float: left;">
+                                                <div class="o2o"></div>
+                                            </div>
+                                            <div style="float:left;">O2O</div>
+                                            <div style="clear:both;"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="./product/" data-gta="event" data-category="out-top-nav">产品</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
 </header>

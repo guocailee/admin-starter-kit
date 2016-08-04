@@ -2,6 +2,11 @@
 var path = require('path')
 
 module.exports = {
+  entrys: {
+    app: './src/entrys/home.js',
+    signin: './src/entrys/signin.js',
+    index: './src/entrys/index.js'
+  },
   htmlPlugins: [{
     filename: 'home.html',
     chunks: ['app'],
@@ -15,20 +20,17 @@ module.exports = {
     // necessary to consistently work with multiple chunks via CommonsChunkPlugin
     chunksSortMode: 'dependency'
   }, {
-    filename: 'login.html',
-    chunks: ['login'],
-    template: 'src/app/login.html',
+    filename: 'signin.html',
+    chunks: ['signin'],
+    template: 'src/app/signin.html',
     inject: true
   }],
   build: {
     env: require('./prod.env'),
-    index: path.resolve(__dirname, '../dist/index.html'),
-    home: path.resolve(__dirname, '../dist/home.html'),
-    login: path.resolve(__dirname, '../dist/login.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'assets',
     assetsPublicPath: '/',
-    productionSourceMap: false,
+    productionSourceMap: true,
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:

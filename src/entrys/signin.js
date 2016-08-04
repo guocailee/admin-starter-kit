@@ -8,4 +8,4 @@ import 'font-awesome-webpack'
 import 'angular'
 import 'angular-animate'
 
-import '../app/login/login.module'
+import '../app/signin/signin.module'

@@ -12,8 +12,8 @@ useCustomIconFontPath: false
 styleLoaders:
   - style?sourceMap
   - css?sourceMap
-  - postcss?sourceMap
   - sass?sourceMap
+
 
 # Extract styles to stand-alone css file
 # Different settings for different environments can be used,
