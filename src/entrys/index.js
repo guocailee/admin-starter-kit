@@ -1,5 +1,4 @@
 // import style dependence
-import 'bootstrap-loader'
 import 'font-awesome-webpack'
 // 引入依赖
 import 'angular'

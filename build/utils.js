@@ -66,7 +66,7 @@ exports.generateHtmlPlugins = function () {
           // more options:
           // https://github.com/kangax/html-minifier#options-quick-reference
       }
-      htmlPluginOption.chunks = ['manifest'].concat(htmlPluginOption.chunks)
+      htmlPluginOption.chunks = ['vendor', 'manifest'].concat(htmlPluginOption.chunks)
       htmlPluginOption.filename = path.resolve(__dirname, '../dist/' + htmlPluginOption.filename)
     }
     return new HtmlWebpackPlugin(htmlPluginOption)

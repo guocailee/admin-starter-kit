@@ -1,3 +1,4 @@
+@import '~styles/common';
 .site-header {
   position: fixed;
   top: 0;
@@ -6,12 +7,8 @@
   min-height: 74px;
   opacity: .97;
   border-bottom: 1px solid transparent;
-  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, .16);
-  -moz-box-shadow: 0 2px 20px rgba(0, 0, 0, .16);
   box-shadow: 0 2px 20px rgba(0, 0, 0, .16);
   background-color: rgba(255, 255, 255, .97);
-  -webkit-transition: all .35s ease-in-out;
-  -o-transition: all .35s ease-in-out;
   transition: all .35s ease-in-out;
   .container {
     width: 100%!important;
@@ -31,10 +28,8 @@
     padding: 0;
     margin: 12px 0;
     text-indent: -9999px;
-    background-image: url(./img/cloud_logo@2x.png);
-    background-size: auto 20px;
+    background-image: url(./img/top-logo.png);
     background-repeat: no-repeat;
-    background-position: left 14px
   }
   .navbar-nav {
     float: right;
@@ -47,12 +42,12 @@
       border-radius: 3px;
       &:focus,
       &:hover {
-        color: #03A9F4;
+        color: $primary;
         background-color: transparent
       }
     }
     &>li.active>a {
-      color: #03A9F4;
+      color: $primary;
     }
   }
   .navbar-button {
@@ -76,7 +71,27 @@
           cursor: pointer;
           text-decoration: none;
           &:hover {
-            color: #03A9F4
+            color: $primary
+          }
+        }
+        &.login {
+          min-width: 70px;
+          color: #6e6e6e;
+          border: 1px solid #6e6e6e;
+          background-color: transparent;
+          &:hover {
+            color: #FFF;
+            background-color: #6e6e6e
+          }
+        }
+        &.signup {
+          min-width: 70px;
+          color: $primary;
+          border: 1px solid $primary;
+          background-color: transparent;
+          &:hover {
+            color: #FFF;
+            background-color: $primary
           }
         }
       }
@@ -100,80 +115,27 @@
       }
     }
   }
-}
-
-.site-header .navbar-button>li>a.user {
-  display: block;
-  position: relative;
-  color: #383838;
-  -webkit-transition: all 218ms;
-  -o-transition: all 218ms;
-  transition: all 218ms
-}
-
-.site-header .navbar-button>li>a.user .avatar {
-  position: absolute;
-  top: 8px;
-  left: -26px;
-  width: 24px;
-  height: 24px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center
-}
-
-.site-header .navbar-button>li>a.user .user-name {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap
-}
-
-.site-header .navbar-button>li>a.login {
-  min-width: 70px;
-  color: #6e6e6e;
-  border: 1px solid #6e6e6e;
-  background-color: transparent
-}
-
-.site-header .navbar-button>li>a.login:hover {
-  color: #FFF;
-  background-color: #6e6e6e
-}
-
-.site-header .navbar-button>li>a.signup {
-  min-width: 70px;
-  color: #03A9F4;
-  border: 1px solid #03A9F4;
-  background-color: transparent
-}
-
-.site-header .navbar-button>li>a.signup:hover {
-  color: #FFF;
-  background-color: #03A9F4
-}
-
-.site-header .info-wrap {
-  margin: 16px 0 16px 35px!important
-}
-
-.site-header .switch-locale {
-  display: inline-block;
-  position: relative;
-  width: 130px;
-  margin: 17px 0;
-  padding: 9px 25px;
-  text-align: center;
-  border-radius: 3px 3px 0 0
-}
-
-.site-header .switch-locale .dropdown-toggle {
-  font-size: 16px;
-  color: #383838
+  .info-wrap {
+    margin: 16px 0 16px 35px!important;
+  }
+  .switch-locale {
+    display: inline-block;
+    position: relative;
+    width: 130px;
+    margin: 17px 0;
+    padding: 9px 25px;
+    text-align: center;
+    border-radius: 3px 3px 0 0;
+    .dropdown-toggle {
+      font-size: 16px;
+      color: #383838
+    }
+  }
 }
 
 .site-header .switch-locale .dropdown-toggle:hover,
 .site-header .switch-locale.open .dropdown-toggle {
-  color: #03A9F4
+  color: $primary
 }
 
 .site-header .switch-locale .dropdown-toggle:after {
@@ -261,7 +223,7 @@
 }
 
 .site-header.transparent .navbar-brand {
-  background-image: url(./img/cloud_logo@2x.png);
+  background-image: url(./img/top-logo.png);
 }
 
 .site-header.transparent .navbar-nav>li>a {
@@ -311,7 +273,7 @@
 }
 
 .site-header.transparent .navbar-button>li>a.login:hover {
-  color: #03A9F4;
+  color: $primary;
   background-color: #FFF
 }
 
@@ -335,10 +297,8 @@
 
 .site-header.mobile-header .navbar-header .navbar-brand {
   margin: 0;
-  width: 150px!important;
   background-size: auto 20px!important;
-  background-position: left 14px!important;
-  background-image: url(./img/cloud_logo@2x.png)!important
+  background-image: url(./img/top-logo.png)!important
 }
 
 .site-header.mobile-header .navbar-header .navbar-toggle {
@@ -408,7 +368,7 @@
 
 .site-header.mobile-header .navbar-collapse .navbar-button .switch-locale-wrap .switch-locale .dropdown-menu>li>a:focus,
 .site-header.mobile-header .navbar-collapse .navbar-button .switch-locale-wrap .switch-locale .dropdown-menu>li>a:hover {
-  color: #03A9F4;
+  color: $primary;
   background-color: transparent
 }
 
@@ -455,10 +415,6 @@
 
 .site-header.mobile-header .navbar-collapse.collapsing .items-wrap,
 .site-header.mobile-header .navbar-collapse.in .items-wrap {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column-reverse
 }

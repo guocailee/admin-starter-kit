@@ -3,7 +3,6 @@
  *  @Date   2016-06-29
  */
 // import style dependence
-import 'bootstrap-loader'
 import 'font-awesome-webpack'
 import './../styles/app.scss'
 
