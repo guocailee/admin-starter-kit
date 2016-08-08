@@ -128,53 +128,44 @@
     border-radius: 3px 3px 0 0;
     .dropdown-toggle {
       font-size: 16px;
-      color: #383838
+      color: #383838;
+      &:hover {
+        color: $primary
+      }
+      &:after {
+        position: relative;
+        top: -2px;
+        content: "\25bc";
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 3px;
+        font-size: 12px;
+        transform: scale(.8)
+      }
+    }
+    &.open {
+      font-size: 14px;
+      background-color: rgba(255, 255, 255, .2);
+      .dropdown-toggle {
+        color: $primary
+      }
+    }
+    &>ul {
+      min-width: 90px;
+      font-size: 16px;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, .2)!important;
+      padding: 0 0 40px;
+      overflow-x: hidden;
+      border-radius: 2px;
+      &>li>a {
+        padding: 8px 15px;
+        top: 2px
+      }
     }
   }
-}
-
-.site-header .switch-locale .dropdown-toggle:hover,
-.site-header .switch-locale.open .dropdown-toggle {
-  color: $primary
-}
-
-.site-header .switch-locale .dropdown-toggle:after {
-  position: relative;
-  top: -2px;
-  content: "\25bc";
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 3px;
-  font-size: 12px;
-  -webkit-transform: scale(.8);
-  -ms-transform: scale(.8);
-  -o-transform: scale(.8);
-  transform: scale(.8)
-}
-
-.site-header .switch-locale>ul {
-  min-width: 90px;
-  font-size: 16px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, .2)!important;
-  padding: 0 0 40px;
-  overflow-x: hidden;
-  border-radius: 2px;
-  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
-  -moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15)
-}
-
-.site-header .switch-locale>ul>li>a {
-  padding: 8px 15px;
-  top: 2px
-}
-
-.site-header .switch-locale.open {
-  font-size: 14px;
-  background-color: rgba(255, 255, 255, .2)
-}
-
-.site-header .logout {
-  display: none
+  .logout {
+    display: none
+  }
 }
 
 @media (min-width:767px) {
@@ -215,66 +206,51 @@
 
 .site-header.transparent {
   box-shadow: none;
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
-  background: -webkit-gradient(linear, top, bottom, from(rgba(0, 0, 0, .4)), to(rgba(0, 0, 0, 0)));
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
-  background: -o-linear-gradient(top, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0))
-}
-
-.site-header.transparent .navbar-brand {
-  background-image: url(./img/top-logo.png);
-}
-
-.site-header.transparent .navbar-nav>li>a {
-  color: #FFF
-}
-
-.site-header.transparent .navbar-nav>li>a:hover {
-  color: #FFF;
-  background-color: rgba(0, 0, 0, .2)
-}
-
-.site-header.transparent .switch-locale .dropdown-toggle {
-  color: #FFF!important
-}
-
-.site-header.transparent .switch-locale .dropdown-toggle:hover {
-  color: #FFF
-}
-
-.site-header.transparent .switch-locale .dropdown-menu {
-  top: 41px;
-  background-color: rgba(0, 0, 0, .2)
-}
-
-.site-header.transparent .switch-locale .dropdown-menu>li>a {
-  color: #FFF
-}
-
-.site-header.transparent .switch-locale .dropdown-menu>li>a:focus,
-.site-header.transparent .switch-locale .dropdown-menu>li>a:hover {
-  color: #FFF;
-  background-color: rgba(0, 0, 0, .2)
-}
-
-.site-header.transparent .switch-locale:hover {
-  background-color: rgba(0, 0, 0, .2)
-}
-
-.site-header.transparent .navbar-button>li>a.user {
-  color: #FFF
-}
-
-.site-header.transparent .navbar-button>li>a.login {
-  color: #FFF;
-  border: 1px solid #FFF;
-  background-color: transparent
-}
-
-.site-header.transparent .navbar-button>li>a.login:hover {
-  color: $primary;
-  background-color: #FFF
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
+  .navbar-brand {
+    background-image: url(./img/top-logo.png);
+  }
+  .navbar-nav>li>a {
+    color: #FFF;
+    &:hover {
+      color: #FFF;
+      background-color: rgba(0, 0, 0, .2)
+    }
+  }
+  .switch-locale {
+    .dropdown-menu {
+      top: 41px;
+      background-color: rgba(0, 0, 0, .2);
+      &>li>a {
+        color: #FFF;
+        &:focus,
+        a:hover {
+          color: #FFF;
+          background-color: rgba(0, 0, 0, .2)
+        }
+        &.user {
+          color: #FFF
+        }
+        &.login {
+          color: #FFF;
+          border: 1px solid #FFF;
+          background-color: transparent:hover {
+            color: $primary;
+            background-color: #FFF
+          }
+        }
+      }
+    }
+    .dropdown-toggle {
+      color: #FFF;
+      &:hover {
+        color: #FFF
+      }
+    }
+    &:hover {
+      background-color: rgba(0, 0, 0, .2)
+    }
+  }
 }
 
 .site-header.mobile-header,

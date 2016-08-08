@@ -4,5 +4,6 @@
  */
 import './header.scss'
 import header from './header.directive'
-angular.module('zk.theme.components.header', [])
-  .directive('zkHeader', header)
+
+export default angular.module('zk.theme.components.header', [])
+  .directive('zkHeader', header).name

@@ -17,7 +17,7 @@ var webpackConfig = {
     })
   },
   // eval-source-map is faster for development
-  devtool: '#eval-source-map',
+  devtool: '#source-map',
   plugins: [
     new webpack.DefinePlugin({
       'process.env': config.dev.env
@@ -26,8 +26,7 @@ var webpackConfig = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin(utils.assetsPath('css/[name].[contenthash].css'))
-    // https://github.com/ampedandwired/html-webpack-plugin
+    new ExtractTextPlugin('[name].[contenthash].css')
   ]
 }
 utils.generateHtmlPlugins().forEach(function (v) {
