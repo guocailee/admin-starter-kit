@@ -1,0 +1,20 @@
+<header class="header">
+    <md-content class="header-shadow">
+        <md-toolbar layout="row" class="header-padding">
+            <div class="logo-container">
+                <img src="./img/top_logo_white.png">
+            </div>
+            <md-autocomplete flex="60" md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)" md-item-text="item.name" md-selected-item-change="download(item)" md-min-length="0" placeholder="搜索您想要下载的软件..">
+                <md-item-template>
+                    <span class="item-title">
+                        <img ng-src="{{item.logo}}" class="search-logo"> 
+                        <span> {{item.name}} </span>
+                    </span>
+                </md-item-template>
+                <md-not-found>
+                    对不起，找不到与"<span class="primary">{{ctrl.searchText}}</span>"有关的软件
+                </md-not-found>
+            </md-autocomplete>
+        </md-toolbar>
+    </md-content>
+</header>
