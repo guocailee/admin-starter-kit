@@ -10,8 +10,12 @@ export default function ($timeout, $parse) {
       scope.$watch(model, function (value) {
         if (value === true) {
           $timeout(function () {
-            element[0].focus()
-            element[0].select()
+            if (angular.isFunction(element[0].focus)) {
+              element[0].focus()
+            }
+            if (angular.isFunction(element[0].select)) {
+              element[0].focus()
+            }
           })
         }
       })

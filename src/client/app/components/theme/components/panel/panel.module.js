@@ -10,4 +10,5 @@ import panelSelfDirective from './panel-self.directive'
 const panel = angular.module('zk.theme.components.panel', [])
 panel.factory('zkPanel', panelService)
   .directive('zkPanelSelf', panelSelfDirective)
-  .directive('zkPanel', panelDirective)
+  .directive('zkPanel', panelDirective).name
+export default panel.name

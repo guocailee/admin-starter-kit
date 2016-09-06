@@ -5,7 +5,7 @@
 /**
  * import theme setting dependences
  */
-import './components/components.module'
+import zkThemeComponents from './components/components.module'
 
 /**
  * import theme files
@@ -27,7 +27,7 @@ import plainText from './filters/text/remove-html'
  *
  */
 const theme = angular.module('zk.theme', [
-  'zk.theme.components'
+  zkThemeComponents
 ])
 
 /**

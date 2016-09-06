@@ -3,18 +3,18 @@ var path = require('path')
 
 module.exports = {
   entrys: {
-    app: './src/entrys/home.js',
-    signin: './src/entrys/signin.js',
-    index: './src/entrys/index.js'
+    app: './src/client/entrys/home.js',
+    signin: './src/client/entrys/signin.js',
+    index: './src/client/entrys/index.js'
   },
   htmlPlugins: [{
     filename: 'home.html',
     chunks: ['app'],
-    template: 'src/app/home.html',
+    template: 'src/client/app/views/home/home.html',
     inject: true
   }, {
     filename: 'index.html',
-    template: 'src/app/index.html',
+    template: 'src/client/app/views/index/index.html',
     inject: true,
     chunks: ['index'],
     // necessary to consistently work with multiple chunks via CommonsChunkPlugin
@@ -22,7 +22,7 @@ module.exports = {
   }, {
     filename: 'signin.html',
     chunks: ['signin'],
-    template: 'src/app/signin.html',
+    template: 'src/client/app/views/signin/signin.html',
     inject: true
   }],
   build: {
@@ -40,6 +40,13 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
+    port: 4000,
+    proxyTable: {
+      '/apiv1/': 'http://localhost:9100'
+    }
+  },
+  prod: {
+    env: require('./prod.env'),
     port: 4000,
     proxyTable: {}
   }

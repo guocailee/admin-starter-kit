@@ -3,7 +3,7 @@
  * @type {Object}
  */
 module.exports = {
-  port: 9000,
+  port: 9100,
   hosts: {
     donwloadCenter: 'http://192.168.1.207:8001/dispatch',
     accountCenter: 'http://172.17.35.2:8009/dispatch'

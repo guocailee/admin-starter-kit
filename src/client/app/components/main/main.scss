@@ -1,0 +1,12 @@
+section {
+  padding: 70px 0;
+}
+
+aside {
+  padding: 50px 0;
+}
+
+.no-gutter > [class*=col-] {
+  padding-right: 0;
+  padding-left: 0;
+}
