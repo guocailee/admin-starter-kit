@@ -3,16 +3,17 @@
  *  @Date   2016-07-20
  */
 import headerHtml from 'ngtemplate!html!./header.html'
-export default function ($window) {
+import headerCtrl from './header.ctrl'
+export default function (headerService) {
   'ngInject'
   return {
     restrict: 'E',
+    controller: headerCtrl,
+    controllerAs: 'ctrl',
     templateUrl: headerHtml,
-    link: function ($scope) {
-      angular.element($window).bind('scroll', function () {
-        $scope.isScrolled = this.pageYOffset !== 0
-        $scope.$apply()
-      })
+    scope: {
+      allSoft: '=?',
+      download: '=?'
     }
   }
 }

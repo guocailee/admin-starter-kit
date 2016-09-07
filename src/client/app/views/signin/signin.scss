@@ -1,0 +1,11 @@
+@import '~styles/common';
+body {
+  background-color: $body-bg;
+  color: $title-text;
+}
+
+.layout {
+  background-color: $card-bg;
+  margin-top: 50px;
+  @include card(0);
+}

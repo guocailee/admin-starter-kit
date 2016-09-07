@@ -2,10 +2,13 @@
  *  @author guocailee
  *  @Date   2016-07-20
  */
-import footerhtml from 'ngtemplate!html!./footer.html'
-export default function () {
+import footer from 'ngtemplate!html!./footer.html'
+export default function ($window) {
+  'ngInject'
   return {
     restrict: 'E',
-    templateUrl: footerhtml
+    templateUrl: footer,
+    link: function ($scope) {},
+    scope: {}
   }
 }
