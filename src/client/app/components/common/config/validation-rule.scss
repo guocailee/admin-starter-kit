@@ -1,0 +1,20 @@
+.field-error {
+  font-size: 12px;
+  position: absolute;
+  right: 15px;
+  border-radius: 4px;
+  background-color: #e35256;
+  color: #fff;
+  padding: 2px 3px;
+  z-index: 1000;
+  margin: 0;
+  pointer-events: none;
+  &::before {
+    content: '';
+    border: 7px solid transparent;
+    position: absolute;
+    bottom: 100%;
+    right: 15px;
+    border-bottom-color: #e35256;
+  }
+}

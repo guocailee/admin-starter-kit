@@ -1,4 +1,4 @@
-export default function ($scope, signinService) {
+export default ($scope, signinService) => {
   'ngInject'
   let vm = this
   vm.params = {
