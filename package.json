@@ -33,6 +33,7 @@
     "font-awesome": "^4.6.3",
     "jasmine": "^2.4.1",
     "jquery": "^3.0.0",
+    "js-md5": "^0.4.1",
     "normalize.css": "^4.2.0"
   },
   "dependencies": {

@@ -14,11 +14,14 @@ export default $validationProvider => {
     email: /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/,
     number: /^\d+$/,
     mobile: /^1(3[0-9]|4[57]|5[0-35-9]|7[01678]|8[0-9])\\d{8}$/,
-    emailOrMobile: '',
-    minlength: function (value, scope, element, attrs, param) {
+    emailOrMobile: (value, scope, element, attrs, param) => {
+      return /^1(3[0-9]|4[57]|5[0-35-9]|7[01678]|8[0-9])\\d{8}$/.test(value) ||
+        /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/.test(value)
+    },
+    minlength: (value, scope, element, attrs, param) => {
       return value.length >= param
     },
-    maxlength: function (value, scope, element, attrs, param) {
+    maxlength: (value, scope, element, attrs, param) => {
       return value.length <= param
     }
   }
@@ -29,6 +32,9 @@ export default $validationProvider => {
     },
     url: {
       error: 'This should be Url'
+    },
+    emailOrMobile: {
+      error: 'This should be Email Or Mobile'
     },
     email: {
       error: 'This should be Email'
